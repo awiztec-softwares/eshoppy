@@ -1,0 +1,33 @@
+tags:
+  name: Test
+  description: Checks server running status
+
+/test/alive:
+  get:
+    summary: Returns the server status
+    tags: [Test]
+    responses:
+      200:
+        description: ok
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ok:
+                  type: boolean
+                  description: success responses
+                message:
+                  type: string
+                  description: server status message
+                timeStamp:
+                  type: string
+                  description: status check time
+                cachedFor:
+                  type: string
+                  description: time for which data is persisted in the server
+              example:
+                ok: true
+                message: Server spinning
+                timeStamp: 17-11-2021 14:03:34 PM
+                cachedFor: 30 second

@@ -1,0 +1,15 @@
+{
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": false
+      }
+    }
+  ],
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "trailingComma": "es5"
+}

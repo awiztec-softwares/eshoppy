@@ -1,0 +1,41 @@
+{
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+      "requireConfigFile": false
+  },
+  "extends": ["eslint:recommended", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "prettier/prettier": [ "warn", { "endOfLine": "auto" } ],
+      "no-process-exit": "off",
+      "class-methods-use-this": "off"
+  },
+  "overrides": [
+      {
+          "files": ["__tests__/*.test.js"],
+          "rules": {
+              "node/no-unpublished-require": "off",
+              "no-undef": "off"
+          }
+      },
+      {
+          "files": ["app/middlewares/error-handlers/*.js"],
+          "rules": {
+              "no-undef": "off"
+          }
+      },
+      {
+          "files": ["config/test_setup.js"],
+          "rules": {
+              "no-undef": "off"
+          }
+      }
+  ]
+}

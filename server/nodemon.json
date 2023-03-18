@@ -1,0 +1,4 @@
+{
+  "ignore": ["*.test.js", "__test__/*", "config/test_setup.js"],
+  "ext": ".yaml .js .json"
+}
